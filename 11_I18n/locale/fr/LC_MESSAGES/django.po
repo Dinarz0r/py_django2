@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-29 18:37+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\app_goods\apps.py:7 .\app_goods\models.py:10
+msgid "goods"
+msgstr "marchandise"
+
+#: .\app_goods\models.py:6
+msgid "code"
+msgstr "code"
+
+#: .\app_goods\models.py:7
+msgid "price"
+msgstr "prix"
+
+#: .\app_goods\models.py:11
+msgid "good"
+msgstr "bien"
+
+#: .\app_pages\views.py:12
+#, python-format
+msgid "Hello there! Today is %(date)s %(time)s"
+msgstr "Salut là-bas! Aujourd'hui est %(date)s %(time)s"
+
+#: .\app_users\forms.py:9
+msgid "Username"
+msgstr ""
+
+#: .\app_users\views.py:40
+msgid "You are successfully logged in"
+msgstr ""
+
+#: .\app_users\views.py:42
+msgid "Error! The user account is inactive."
+msgstr ""
+
+#: .\app_users\views.py:44
+msgid "Error! Check the spelling of your username and password."
+msgstr ""
+
+#: .\app_users\views.py:56
+msgid "You have successfully logged out of your account"
+msgstr ""
+
+#: .\app_users\views.py:164
+msgid "Password recovery"
+msgstr ""
+
+#: .\app_users\views.py:165
+msgid "New password:"
+msgstr ""
+
+#: .\app_users\views.py:168
+msgid "An email with a new password was successfully sent"
+msgstr ""
+
+#: .\templates\greetings.html:6
+msgid "What time is it?"
+msgstr "Quelle heure est-il?"
+
+#: .\templates\translation_example.html:6
+msgid "Our translation page title."
+msgstr "Titre de notre page de traduction."
+
+#: .\templates\translation_example.html:9
+msgid "Translated text."
+msgstr "Le texte traduit."
+
+#: .\templates\translation_example.html:23
+msgid "Welcome to our page"
+msgstr "Bienvenue sur notre page"
+
+#: .\templates\users\login.html:23
+msgid "Login page"
+msgstr ""
+
+#: .\templates\users\login.html:27
+msgid "Login"
+msgstr ""
+
+#: .\templates\welcome.html:9
+msgid "Welcome!"
+msgstr "Accueillir!"

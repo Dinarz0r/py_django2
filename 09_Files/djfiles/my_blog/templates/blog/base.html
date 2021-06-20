@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            SkillBlog
+        {% endblock %}
+    </title>
+</head>
+
+<body style="width: 1000px; position: absolute; left: 50%; margin-left: -500px;">
+<a href="{% url 'main_page' %}" style="font-size: 40px">SKILL-BLOG</a>
+
+{% if request.user.is_authenticated %}
+    <b style="font-size: 20px; position: absolute; right: 0;">
+        <a href="{% url 'edit_account' %}">Редактировать страницу</a><br>
+        <a href="{% url 'logout' %}">Выйти из системы</a>
+    </b>
+    <h2>
+        Доброго времени суток {{ request.user.username }}</h2>
+    <a href="{% url 'add_blog' %}">Добавить блог</a><br>
+    <a href="{% url 'add_csv_blog' %}">Добавить блоги массово (используя csv файл)</a>
+
+
+{% else %}
+
+    <b style="font-size: 20px; position: absolute; right: 0;">
+        <a href="{% url 'login' %}">Войти</a>
+        <a href="{% url 'register' %}">(Зарегистрироваться)</a>
+    </b>
+    <h2>
+        Вы не авторизованы на нашем сайте
+    </h2>
+{% endif %}
+<hr>
+<div style="width: 1000px; position: absolute;">
+    {% block content %}
+        Пусто
+    {% endblock %}
+</div>
+</body>
+</html>

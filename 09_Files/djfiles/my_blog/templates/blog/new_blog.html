@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Создать блог - SkillBlog
+{% endblock %}
+
+{% block content %}
+    <h1>Создать блог</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ blog_form.as_p }}
+        {{ add_image_form.as_p }}
+        <button type="submit">Добавить блог</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    CSV - SkillBlog
+{% endblock %}
+
+{% block content %}
+    <h1>Массовая загрузка блогов CSV</h1>
+    <p>Для массового добавления блогов нужно составить таблицу формата:</p>
+    <p><i>Блог который мы заслужили 3:2021-06-01</i></p>
+    <p><i>Блог который мы заслужили 4:2022-02-28</i></p><br>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Загрузить</button>
+    </form>
+{% endblock %}

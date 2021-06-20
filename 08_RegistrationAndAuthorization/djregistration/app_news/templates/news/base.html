@@ -1,0 +1,23 @@
+{% if request.user.is_authenticated %}
+    <div>
+        <h2>
+            Доброго времени суток {{ request.user.username }}
+            <a href="{% url 'logout' %}" style="font-size: 25px">Выйти из системы</a>
+        </h2>
+    </div>
+
+{% else %}
+    <h2>
+        Вы не авторизованы на нашем сайте
+        <a href="{% url 'login' %}">Войти</a>
+        <a href="users/register">Зарегистрироваться</a>
+    </h2>
+
+
+{% endif %}
+{% block content %}
+    {% for new in news %}
+        <h2><a href="{% url 'new_single' pk=new.id %}">{{ new.title }}</a></h2>
+        <p>{{ new.create_at }}</p>
+    {% endfor %}
+{% endblock content %}

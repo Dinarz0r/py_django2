@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+    {% trans "Список магазинов" %}
+{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Список магазинов" %}</h1>
+    {% if shops %}
+        <ol>
+            {% for shop in shops %}
+                <li style="font-size: 30px; list-style: disc">
+                    <a href="shop/{{ shop.id }}"> <b style="font-style:inherit"><em>{{ shop }}</em></b></a>
+                </li>
+            {% endfor %}
+        </ol>
+    {% endif %}
+{% endblock %}

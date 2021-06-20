@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+    {{ shop }}
+{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Магазин" %} {{ shop }} </h1>
+
+
+    {% if goods %}
+        <ol>
+            {% for product in goods %}
+
+                <li style="font-size: 30px; list-style: disc">
+                    <a href="buy/{{ product.article }}">
+                        <b>{{ product }}</b><br>
+                        <p style="font-size: 20px; text-align: justify;">
+                            {% trans "Артикул" %}: {{ product.article }}<br>
+                            {% trans "Цена" %}: {{ product.price }}
+                        </p>
+                    </a>
+                </li>
+                <hr>
+            {% endfor %}
+        </ol>
+    {% endif %}
+{% endblock %}

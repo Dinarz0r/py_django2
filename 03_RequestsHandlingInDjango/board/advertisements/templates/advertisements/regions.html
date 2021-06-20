@@ -1,0 +1,17 @@
+<html>
+<body>
+<ul>
+    {% for reg in regions %}
+    <li>{{ reg }}</li>
+    {% endfor %}
+</ul>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {{ new }}
+    </table>
+    <input type="text" name="new_reg">
+    <input type="submit" value="Добавить"/>
+</form>
+</body>
+</html>

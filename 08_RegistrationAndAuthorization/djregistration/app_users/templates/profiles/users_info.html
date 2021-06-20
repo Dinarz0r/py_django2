@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>You info</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+    {{ request.user.first_name }}, информация о вас:<br>
+    Имя: {{ request.user.username }}<br>
+    Почта: {{ request.user.email }}<br>
+    Имя: {{ request.user.first_name }}<br>
+    Фамилия: {{ request.user.last_name }}<br>
+{% else %}
+    Вы не залогинены!
+{% endif %}
+</body>
+</html>

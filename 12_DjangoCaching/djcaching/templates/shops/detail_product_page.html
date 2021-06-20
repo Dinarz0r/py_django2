@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+    {{ shop }}
+{% endblock %}
+
+{% block content %}
+    <h1>{% trans "ТОВАР" %} {{ shop }} </h1>
+
+    <p style="font-size: 20px; text-align: justify;">
+        {% trans "Артикул" %}: {{ shop.article }}<br>
+        {% trans "Цена" %}: {{ shop.price }}
+    </p>
+    {% if request.user.is_authenticated %}
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" name="buy" value="yes">{% trans "Купить" %}</button>
+        </form>
+    {% else %}
+        <b style="font-size: 20px; position: absolute; left: 0;">
+            {% trans "Для покупки товара необходимо аутентифицироваться" %}
+            <a href="{% url 'login' %}">{% trans "Вход" %}</a>
+            <a href="{% url 'register' %}">{% trans "(Зарегистрироваться)" %}</a>
+        </b>
+    {% endif %}
+
+
+{% endblock %}

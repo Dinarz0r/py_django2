@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+
+{% block title %}
+    SB - {{ blog.title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ blog.title }}</h1>
+    {% if ava.avatar %}
+    <img style="width: 50px;" src="/media/{{ ava.avatar }}"
+                alt="{{ blog.title }}">
+    {% endif %}
+
+    <b style="font-size: 47px">{{ blog.user }}</b><br>
+    {% trans "Дата публикации" %} {{ blog.create_at }}
+    <hr>
+    <p style="text-indent: 35px; font-size: 30px; text-align: justify;"><em>{{ blog.text|safe }}</em></p>
+    {% if image %}
+        <h2>{% trans "Фотоизображения статьи" %}</h2>
+        {% for img in image %}
+            <a href="/media/{{ img.image }}">
+                <img style="width: 200px;" src="/media/{{ img.image }}"
+                     alt="{{ blog.title }}">
+            </a>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

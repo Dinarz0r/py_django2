@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Блоги - информация</title>
+</head>
+<body>
+{% if blogs %}
+    {% for blog in blogs %}
+        <p>Название блога: {{ blog.name }}</p>
+        <p>Количество постов в блоге: {{ blog.count_posts }}</p>
+        <hr>
+    {% endfor %}
+
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+
+<b>Категории из списка:</b>
+        <ul>
+            {% for i in get_cat %}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+<b>Регионы из списка:</b>
+        <ul>
+            {% for i in get_reg %}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {{ new }}
+    </table>
+    <input type="text" name="search">
+    <input type="submit" value="Найти"/>
+</form>
+</html>

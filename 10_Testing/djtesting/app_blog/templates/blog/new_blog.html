@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% load i18n %}
+{% block title %}
+    {% trans "Создать блог" %} - SkillBlog
+{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Создать блог" %}</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ blog_form.as_p }}
+        {{ add_image_form.as_p }}
+        <button type="submit">{% trans "Добавить блог" %}</button>
+    </form>
+{% endblock %}

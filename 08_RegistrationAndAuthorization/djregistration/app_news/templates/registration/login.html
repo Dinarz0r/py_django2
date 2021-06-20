@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Логин</title>
+</head>
+<body style="background-color: antiquewhite">
+
+
+
+
+    <form method="post" style="position: absolute; top: 20%; right: 50%;">
+        <h2>Страница входа</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+
+
+</body>
+</html>

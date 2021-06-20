@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+
+{% block title %}
+    SkillBlog - {% trans "Главная страница" %}
+{% endblock %}
+
+{% block content %}
+    <h1>SkillBLOG</h1>
+    {% if form %}
+        <ul>
+            {% for blog in form %}
+
+                    <a href="/blog/{{ blog.id }}">
+                        <b style="font-size: 25px">{{ blog.user }}: {{ blog.title }}</b>
+                        <ol><p style="font-size: 20px">{{ blog.get_text_100 }}</p></ol>
+                    </a>
+
+                <hr>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>
+            {% trans "Блогов нет." %}
+        </p>
+    {% endif %}
+{% endblock %}

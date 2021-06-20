@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-02 09:28+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\app_blog\apps.py:7 .\app_blog\models.py:16 .\app_blog\models.py:35
+msgid "Блог"
+msgstr "Blog"
+
+#: .\app_blog\forms.py:11 .\app_blog\models.py:8
+msgid "Заголовок"
+msgstr "Title"
+
+#: .\app_blog\forms.py:20
+msgid "Загрузить фото"
+msgstr "Upload a photo"
+
+#: .\app_blog\models.py:7
+msgid "Автор"
+msgstr "Author"
+
+#: .\app_blog\models.py:9
+msgid "Текст статьи"
+msgstr "Text of the article"
+
+#: .\app_blog\models.py:10
+msgid "Дата создания блога"
+msgstr "Blog Created Date"
+
+#: .\app_blog\models.py:11
+msgid "Дата обновления статьи"
+msgstr "Date the article was updated"
+
+#: .\app_blog\models.py:12 .\app_blog\templates\blog\detail_blog.html:16
+msgid "Дата публикации"
+msgstr "Date of publication"
+
+#: .\app_blog\models.py:13
+msgid "Опубликовать блог"
+msgstr "Post a blog"
+
+#: .\app_blog\models.py:17
+msgid "Блоги"
+msgstr "Blogs"
+
+#: .\app_blog\models.py:33
+msgid "Изображение"
+msgstr "Picture"
+
+#: .\app_blog\templates\blog\add_csv_blog.html:9
+msgid "Массовая загрузка блогов CSV"
+msgstr "Bulk Upload CSV Blogs"
+
+#: .\app_blog\templates\blog\add_csv_blog.html:10
+msgid "Для массового добавления блогов нужно составить таблицу формата:"
+msgstr ""
+"For the mass adding of blogs, you need to create a table of the format:"
+
+#: .\app_blog\templates\blog\add_csv_blog.html:11
+msgid "Блог который мы заслужили 3:2021-06-01"
+msgstr "The blog we deserve 3:2021-06-01"
+
+#: .\app_blog\templates\blog\add_csv_blog.html:12
+msgid "Блог который мы заслужили 4:2022-02-28"
+msgstr "The blog we deserve 4:2022-02-28"
+
+#: .\app_blog\templates\blog\add_csv_blog.html:16
+msgid "Загрузить"
+msgstr "Upload a photo"
+
+#: .\app_blog\templates\blog\base.html:32
+msgid "Редактировать страницу"
+msgstr "Edit page"
+
+#: .\app_blog\templates\blog\base.html:33
+msgid "Выйти из системы"
+msgstr "Log out"
+
+#: .\app_blog\templates\blog\base.html:36
+msgid "Доброго времени суток"
+msgstr "Good day"
+
+#: .\app_blog\templates\blog\base.html:37
+#: .\app_blog\templates\blog\new_blog.html:14
+msgid "Добавить блог"
+msgstr "Add a blog"
+
+#: .\app_blog\templates\blog\base.html:38
+msgid "Добавить блоги массово (используя csv файл)"
+msgstr "Add blogs in bulk (using csv file)"
+
+#: .\app_blog\templates\blog\base.html:58
+msgid "Войти"
+msgstr "Login"
+
+#: .\app_blog\templates\blog\base.html:59
+msgid "(Зарегистрироваться)"
+msgstr "(Register)"
+
+#: .\app_blog\templates\blog\base.html:62
+msgid "Вы не авторизованы на нашем сайте"
+msgstr "You are not logged into our site"
+
+#: .\app_blog\templates\blog\base.html:68
+msgid "Пусто"
+msgstr "Empty"
+
+#: .\app_blog\templates\blog\detail_blog.html:20
+msgid "Фотоизображения статьи"
+msgstr "Photographic articles"
+
+#: .\app_blog\templates\blog\main_list.html:5
+msgid "Главная страница"
+msgstr "Home page"
+
+#: .\app_blog\templates\blog\main_list.html:24
+msgid "Блогов нет."
+msgstr "There are no blogs."
+
+#: .\app_blog\templates\blog\new_blog.html:5
+#: .\app_blog\templates\blog\new_blog.html:9
+msgid "Создать блог"
+msgstr "Create a blog"
+
+#: .\app_blog\views.py:42
+msgid "У вас не достаточно прав"
+msgstr "You don't have enough rights"
+
+#: .\app_blog\views.py:99
+msgid "У Вас не достаточно прав для добавления нового блога"
+msgstr "You do not have sufficient rights to add a new blog"
+
+#: .\app_media\forms.py:8
+msgid "CSV файл"
+msgstr "CSV file"
+
+#: .\app_user\apps.py:7 .\app_user\models.py:13
+msgid "Модель пользователя"
+msgstr "User model"
+
+#: .\app_user\apps.py:8 .\app_user\models.py:14
+msgid "Модель пользователей"
+msgstr "Users model"
+
+#: .\app_user\forms.py:8
+msgid "Имя"
+msgstr "Name"
+
+#: .\app_user\forms.py:9
+msgid "Фамилия"
+msgstr "Surname"
+
+#: .\app_user\forms.py:10 .\app_user\models.py:8
+msgid "Город"
+msgstr "City"
+
+#: .\app_user\forms.py:11 .\app_user\models.py:9
+msgid "Телефон"
+msgstr "Telephone"
+
+#: .\app_user\forms.py:12
+msgid "Аккаунт"
+msgstr "Account"
+
+#: .\app_user\forms.py:13
+msgid "Эл. почта"
+msgstr "Email"
+
+#: .\app_user\forms.py:14
+msgid "Аватар"
+msgstr "Avatar"
+
+#: .\app_user\forms.py:35
+msgid "Эл. Почта"
+msgstr "Email"
+
+#: .\app_user\models.py:7
+msgid "Пользователь"
+msgstr ""
+
+#: .\app_user\models.py:10
+msgid "Аватарка"
+msgstr "Avatar"
+
+#: .\app_user\templates\profile\reg_page.html:5
+msgid "Регистрация"
+msgstr "(Register)"
+
+#: .\app_user\templates\profile\reg_page.html:12
+msgid "Зарегистрироваться"
+msgstr "Register"
+
+#: .\app_user\views.py:61
+msgid "Прежде чем что то менять, аутентифицируйся "
+msgstr "Before you change something, authenticate yourself"
+
+#: .\app_user\views.py:85
+msgid "Восстановление пароля"
+msgstr "Date the article was updated"
+
+#: .\app_user\views.py:90
+msgid "Письмо с восстановлением пароля успешно отправлено"
+msgstr "Password recovery email has been successfully sent"

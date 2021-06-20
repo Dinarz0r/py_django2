@@ -1,0 +1,19 @@
+<html>
+<b>
+    Счетчик вызовов post запросов {{ count_click }}
+</b>
+
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        <ul>
+            {% for i_job in job %}
+            <li>{{ i_job }}</li>
+            {% endfor %}
+        </ul>
+        {{ new }}
+    </table>
+    <input type="text" name="new_reg">
+    <input type="submit" value="Добавить"/>
+</form>
+</html>

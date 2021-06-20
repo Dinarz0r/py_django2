@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ adv_obj.title }}</title>
+</head>
+<body>
+<h1>{{ adv_obj.title }}</h1>
+<p>Цена: {{ adv_obj.price }}</p>
+<p>Описание: {{ adv_obj.description }}</p>
+<p>Рубрика: {{ adv_obj.categories }}</p>
+<h1>Контактная информация:</h1>
+<ul>
+
+    <li>Имя:{{ adv_obj.user.name }}</li>
+    <li>Эл. Почта:{{ adv_obj.user.email }}</li>
+    <li>Телефон:{{ adv_obj.user.number_phones }}</li>
+
+</ul>
+<p>кол-во просмотров: {{ adv_obj.view_count }}</p>
+</body>
+</html>

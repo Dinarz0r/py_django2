@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load cache %}
+
+{% block title %}
+    {% trans "Личный кабинет программы лояльности" %}
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Ваш баланс: {{ balance }} rub.
+    </p>
+    <hr>
+    <p>
+        {{ request.user|title }}, Ваши акции и предложения!
+    </p>
+        <h2>Акции:</h2>
+        <i style="font-size: 18px">
+        {% if promotions %}
+            <ol>
+                {% for promotion in promotions %}
+
+                    <li>{{ promotion.promotion }}<br><br></li>
+
+
+                {% endfor %}
+            </ol>
+        {% endif %}
+
+    </i>
+    <h2>Предложения:</h2>
+    <i style="font-size: 18px">
+        {% if offers %}
+            <ol>
+                {% for offer in offers %}
+
+                    <li>{{ offer.offer }}<br><br></li>
+
+
+                {% endfor %}
+            </ol>
+        {% endif %}
+
+    </i>
+
+
+
+    <hr>
+    <h3>История покупок:</h3>
+    {% if payment_history %}
+        {% cache 30 hist_buy_products %}
+            <ol>
+                {% for product in payment_history %}
+                    <li>
+                        Товар: {{ product.goods }}<br>
+                        Цена: {{ product.price }}<br>
+                        Дата покупки: {{ product.purchase_date }}
+                    </li><br>
+                {% endfor %}
+            </ol>
+        {% endcache %}
+    {% else %}
+        Покупок не совершено
+    {% endif %}
+    <hr>
+{% endblock %}

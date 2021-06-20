@@ -1,0 +1,48 @@
+{% extends 'news/base.html' %}
+
+<html lang="ru">
+{% block content %}
+
+    <h1>{{ new.title }}</h1>
+    <p>{{ new.text|safe }}</p>
+    <hr>
+
+    Автор:
+    {% if new.user.username == None %}
+        [anonymous]
+    {% else %}
+        {{ new.user }}
+    {% endif %}
+    <br>
+    Дата публикации: {{ new.create_at }}<br>
+    {% if flag %}
+        <a href="{{ new.pk }}/edit">ОПУБЛИКОВАТЬ ИЛИ УБРАТЬ НОВОСТЬ (для модератора)</a>
+        <hr>
+    {% endif %}
+    <h4>Комментарии</h4>
+
+    {% for comment in comments %}
+        <div style="border:3px #00B344  solid; width:375px;">
+            <p style="font-size: 20px">
+                {% if comment.user_id == null %}
+                    <b>{{ comment.username }} [аноним]</b>
+                {% else %}
+                    {% if comment.user.first_name %}
+                        <b>{{ comment.user.first_name }}</b>
+                    {% else %}
+                        <b>{{ comment.user }}</b>
+                    {% endif %}
+
+                {% endif %}</p>
+            {{ comment.text }} <br><br>
+            Добавлен {{ comment.create_at }}<br><br>
+        </div>
+    {% endfor %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+    <a href="{% url 'index' %}">На главную страницу</a>
+{% endblock content %}
+</html>
